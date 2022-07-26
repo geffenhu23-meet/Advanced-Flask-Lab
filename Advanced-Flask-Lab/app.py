@@ -19,13 +19,19 @@ posts = {
     "https://pbs.twimg.com/media/FPvsO6xVkAEcrBm?format=jpg&name=900x900": "#Throwback to one of our favorite #MEETsummer events: #BowlingNight!",
     "https://pbs.twimg.com/media/FI_UkcnVIAAUvWN?format=jpg&name=medium": "2020 cohort in their Y1 summer!"}
 
+#make 2 lists for loop dic seporate link and dis
+links=[]
+disc=[]
+for key, value in posts.items():
+    links.append(key)
+    disc.append(value)
 
 #####
 
 
 @app.route('/')  # '/' for the default page
 def home():
-    return render_template('index.html')
+    return render_template('index.html',image_link = image_link, user_bio=user_bio, links=links, disc=disc)
 
 
 @app.route('/about')  # '/' for the default page
