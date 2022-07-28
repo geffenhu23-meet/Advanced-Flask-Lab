@@ -13,9 +13,9 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="avatar"><img src="{{image_link}}" alt="" /></span>
+						<span class="avatar"><img src="{{ img }}" alt="" /></span>
 
-            <h1>{{user_bio}}</h1>
+            <h1>{{ u_bio }}</h1>
             <br>
             <!-- About me button -->
             <a href="#"><button style="color:white;width:40%" >More about me</button></a>
@@ -54,6 +54,17 @@
                       </a>
                 </div>  
 
+									{% for key in ps %}
+									<div>
+                  <a href="">
+                        <img src="{{ key }}" alt="" />
+                        <h3>{{ ps[key] }}</h3> <!-- ps[key] = values -->
+                      </a>
+                </div>  
+
+									{% endfor %}
+
+							
 							</section>
 
 					</section>
